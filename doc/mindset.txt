@@ -22,3 +22,12 @@ Les tâches sont réparties comme suit :
  - Client AngularJs (Aurel et Antoine)
  - Application Android (Stéphane et Alexandre)
  - Documentation et rôle de Scrum Master (Guillaume)
+
+
+ Situation intermédiaire :
+
+ Il est 00h30, notre prochain "daily scrum" est dans 30 minutes et jusqu'ici, tout semble aller bien. L'application mobile est fonctionnelle dans sa version la plus basique, le serveur reçoit les requêtes et renvoie correctement les données liées aux zones sinistrées, seul le client a pris du retard pour un bête soucis de dépendance non déclarée.
+
+ Ma principale crainte, c'est le temps : tout semble passer très vite, même si on avance, et même si tout le monde est encore motivé, ce qui est une bonne chose si l'on compare à notre nuit de l'info 2013, il est difficile de dire que tout sera terminé. Le plus dommage serait que l'application ne soit pas suffisamment avancée pour répondre au moindre défi.
+
+ Je vais donc prendre des mesures en conséquence au prochain daily scrum, après avoir vu où tout le monde en est, pour voir s'il est toujours réaliste de répondre à nos 5 défis. On a toujours bon espoir d'en remporter au moins un. ;)
