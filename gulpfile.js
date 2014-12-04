@@ -8,7 +8,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 
 
-gulp.task('clean', del.bind(null, ['public']));
+gulp.task('clean', del.bind(null, ['public', '.tmp']));
 
 gulp.task('copy', function() {
     gulp.src(['client/bower_components/**/*'], {base: './client'})
@@ -31,7 +31,7 @@ gulp.task('templates', function() {
             moduleName:"bitonic",
         }))
         .pipe($.concat('template.js'))
-        .pipe(gulp.dest('./tmp'));
+        .pipe(gulp.dest('./.tmp'));
 });
 
 gulp.task('libs.scripts', function() {
@@ -86,5 +86,9 @@ gulp.task('watch', ['default'], function() {
 
     gulp.watch(['client/app/**/*.js'], ['app.scripts']);
     gulp.watch(['client/app/**/*.html'], ['templates']);
+    gulp.watch(['client/index.html'], function() {
+        gulp.src(['client/index.html'], {base: './client'})
+        .pipe(gulp.dest('public'));
+    });
     gulp.watch(['client/app/**/*.less'], ['styles']);
 });
