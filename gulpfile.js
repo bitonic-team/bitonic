@@ -77,15 +77,18 @@ gulp.task('styles', function(e) {
 gulp.task('default', ['clean'], function(cb) {
     runSequence(['copy', 'templates', 'libs.scripts', 'styles'], 'app.scripts', cb);
 });
-
+gulp.task('template2', ['templates'], function(cb) {
+    runSequence('app.scripts', cb);
+});
 
 gulp.task('watch', ['default'], function() {
     gulp.watch([
         'public/**/*',
+        '!public/bower_components',
     ], $.livereload.changed);
 
     gulp.watch(['client/app/**/*.js'], ['app.scripts']);
-    gulp.watch(['client/app/**/*.html'], ['templates']);
+    gulp.watch(['client/app/**/*.html'], ['template2']);
     gulp.watch(['client/index.html'], function() {
         gulp.src(['client/index.html'], {base: './client'})
         .pipe(gulp.dest('public'));

@@ -8,7 +8,7 @@ var dbConfig = function(){
         url = 'mongodb://localhost/bitonic'
     }
     else{
-        url='mongodb://localhost/bitonic'
+        url='mongodb://mongo/bitonic'
     }
 
     return {

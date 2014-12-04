@@ -5,6 +5,7 @@
 /config.json
 /public
 /tmp
+/.tmp
 /docker
 
 # Logs

@@ -4,7 +4,7 @@
     "port": "80"
   },
   "scripts": {
-    "start": "/usr/local/bin/npm install && /usr/local/bin/gulp && /usr/local/bin/forever -fw server.js"
+    "start": "/usr/local/bin/npm install && /usr/local/bin/forever -fw server.js NODE_ENV=prod"
   },
   "dependencies": {
     "body-parser": "~1.5.0",
