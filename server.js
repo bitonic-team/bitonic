@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/public'));
 require('./server/routes/api')(app);
 
 app.get('/*', function (req, res) {
-  res.redirect("/public/index.html");
+  res.sendfile(__dirname+"/public/index.html");
 });
 
 app.listen(port, function () {
