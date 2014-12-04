@@ -1,0 +1,22 @@
+Situation de départ :
+
+Nous sommes l'équipe Bitonic, composée de 6 membres : Aurel, Antoine, Stéphane, David, Alexandre et Guillaume.
+
+Nous avons décidé de répondre aux défis suivants :
+" Développez... votre "mindset"! ",
+" « AngularJiSez » votre nuit de l’info ! ",
+" Application mobile ",
+" Soyons Agile Agilement ",
+" Le collectionneur ".
+
+Nous allons donc développer une application web, avec un serveur sous forme d'API Restful via node.js, un client web AngularJs, et une application mobile Android, en utilisant au mieux possible la méthode Agile.
+
+L'application consiste en une carte du monde, sur laquelle s'affichent les "points chauds", c'est-à-dire les régions sinistrées, les territoires en guerre...
+L'objectif est d'une part de faciliter la visualisation des conflits dans le monde, et d'autre part de permettre aux utilisateurs de faire un don aux Organisations non gouvernementales présentes sur une zone donnée.
+
+Les tâches sont réparties comme suit :
+
+ - Mise en place de l'API restful (David)
+ - Client AngularJs (Aurel et Antoine)
+ - Application Android (Stéphane et Alexandre)
+ - Documentation et rôle de Scrum Master (Guillaume)
