@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('yotestApp', [
-  'ngCookies',
+angular.module('bitonic', [
   'ngResource',
   'ui.router'
 ])

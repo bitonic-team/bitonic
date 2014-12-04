@@ -5,7 +5,7 @@ angular.module('bitonic')
     $stateProvider
       .state('main', {
         url: '/',
-        templateUrl: 'app/main/main.html',
+        templateUrl: 'main/main.html',
         controller: 'MainCtrl'
       });
   });
