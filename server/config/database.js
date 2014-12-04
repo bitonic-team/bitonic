@@ -15,3 +15,6 @@ var dbConfig = function(){
 
 module.exports = dbConfig;
 
+
+//db.Places.insert({"name" : "antoine suce des noeuds", lat : 2277, lng : 8786})
+
