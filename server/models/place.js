@@ -9,3 +9,4 @@ var placeSchema = mongoose.Schema({
 
 module.exports = mongoose.model('Place', placeSchema, 'Places');
 
+
