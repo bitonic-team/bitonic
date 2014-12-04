@@ -1,0 +1,16 @@
+[BITONIC] Humans play
+
+
+[nom de l'appli] est une application qui permet, en un clin d'oeil, de visualiser les zones géographiques sinistrées et les régions du monde en guerre,
+Un clic sur une région affiche les ONG présentes à proximité et permet d'effectuer un don qui sera divisé entre ces différentes ONG.
+
+Description fonctionnelle :
+
+
+Fonction principale :
+
+- Permettre à l'utilisateur de faire un don aux ONG présentes sur la  du monde de son choix
+
+Fonctions secondaires :
+- Afficher les "points chauds" sur la carte du monde
+- Visualiser les informations relatives à une région en particulier
