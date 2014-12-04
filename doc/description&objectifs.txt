@@ -7,13 +7,10 @@ Un clic sur une région affiche les ONG présentes à proximité et permet d'eff
 Description fonctionnelle :
 
 
-Fonction principale :
-
-- Permettre à l'utilisateur de faire un don aux ONG présentes sur la région du monde de son choix
-
-Fonctions secondaires :
-- Afficher les "points chauds" sur la carte du monde
-- Visualiser les informations relatives à une région en particulier
+- Visualiser les zones sinistrées dans le monde
+- Afficher une zone en particulier, avec des informations sur le sinistre, la liste des ONG sur place, et l'action humanitaire engagée
+- Permettre l'envoi de dons sur la zone choisie
+- Répartir les dons entre les différentes ONG présentes sur la zone choisie
 
 
 Objectif :

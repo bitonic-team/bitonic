@@ -14,6 +14,8 @@ Nous allons donc développer une application web, avec un serveur sous forme d'A
 L'application consiste en une carte du monde, sur laquelle s'affichent les "points chauds", c'est-à-dire les régions sinistrées, les territoires en guerre...
 L'objectif est d'une part de faciliter la visualisation des conflits dans le monde, et d'autre part de permettre aux utilisateurs de faire un don aux Organisations non gouvernementales présentes sur une zone donnée.
 
+Notre objectif à nous, en tant qu'équipe, est de fournir une application web et une application mobile fonctionnelles ainsi que les documents nécessaires aux défis Mindset et Agile avant la fin du temps imparti. Nous avons bon espoir de remporter au moins un défi. De manière, plus précise, la méthode Agile nous permet de définir des "objectifs" pour chaque "sprint", définis sur notre board Trello : https://trello.com/b/RqDONpmX/bitonic-will-save-the-huminaty
+
 Les tâches sont réparties comme suit :
 
  - Mise en place de l'API restful (David)
