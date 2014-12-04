@@ -1,0 +1,26 @@
+Le principe :
+
+2 zones avec 3 ONG chacunes
+Dons géolocalisés
+
+
+Sur une map :
+des lieux cliquables
+	=> infos sur le lieu
+faire un don à une région
+
+
+======================
+
+Les fonctionnalités :
+
+Visualiser les régions sur une carte
+Afficher les détails d'une région
+Faire un don à une région
+
+
+======================
+
+MVP (scénario minimal fonctionnel) :
+
+J'affiche les régions, j'en choisis une, je lui fais un don

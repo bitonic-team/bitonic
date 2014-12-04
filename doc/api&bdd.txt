@@ -1,0 +1,18 @@
+API :
+
+Places :
+	get : renvoie les régions désirées
+	
+
+/api/places  	// toutes les régions
+/api/places/:id // une region
+	
+
+
+BDD :
+
+Régions :
+	id
+	position
+	nom
+	data	
