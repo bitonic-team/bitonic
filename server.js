@@ -1,6 +1,7 @@
 var express = require('express')
 var app = express()
 var mongoose   = require('mongoose');
+var cors = require('cors')
 
 var configDB  = require('./server/config/database.js');
 var port       = process.env.PORT || 80;
@@ -9,6 +10,7 @@ var port       = process.env.PORT || 80;
 // CONNECT TO DB
 mongoose.connect(configDB.url);
 
+app.use(cors());
 app.use(express.static(__dirname + '/public'));
 require('./server/routes/api')(app);
 
