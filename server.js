@@ -1,5 +1,13 @@
 var express = require('express')
 var app = express()
+var mongoose   = require('mongoose');
+
+var configDB   = require('./server/config/database.js');
+var port       = process.env.PORT || 80;
+
+// CONNECT TO DB
+//mongoose.connect(configDB.devUrl);
+
 
 app.use(express.static(__dirname + '/public'));
 
@@ -9,6 +17,7 @@ app.get("/", function (req, res) {
 
 require('./server/routes/api')(app);
 
-app.listen(80, function () {
-    console.log('app running port 80');
+
+app.listen(port, function () {
+    console.log('app running port'+ port);
 })
