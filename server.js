@@ -1,8 +1,14 @@
-var http = require("http");
+var express = require('express')
+var app = express()
 
-var server = http.createServer(function(request, response) {
-  response.end('hello world');
+app.use(express.static(__dirname + '/public'));
+
+app.get("/", function (req, res) {
+  res.redirect("/public/index.html");
 });
- 
-server.listen(80);
-console.log("Server is listening");
+
+require('./server/routes/api')(app);
+
+app.listen(80, function () {
+    console.log('app running port 80');
+})
