@@ -1,0 +1,7 @@
+{
+    "port": "80",
+    "mysql_host":"mysql",
+    "mysql_user":"root",
+    "mysql_password":"",
+    "mongo_uri": "mongodb://mongo"
+}

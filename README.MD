@@ -5,41 +5,48 @@ Bitonic - La Nuit de l'info Team :D
 Installation
 -------------
 **Requirements:**
+
 Install FIG at fig.sh
+
 install docker
+
 install docker-enter
 
-Get source
-`$ git clone http://the.repository`
-`$ cd repository`
+----------------------------
 
-Create data directory for mongo & mysql
-`$ mkdir -p tmp/mongo && mkdir -p tmp/mysql`
+`$ git clone https://github.com/lighta971/bitonic && cd bitonic`
 
-Install MYSQL
-`$ cd docker && fig run mysql`
-`$ docker-enter docker_mysql_run_1`
+`$ cd docker && fig up`
+
+`$ docker-enter docker_mysql_1`
+
 `$ mysql_install_db && supervisorctl restart mysql`
 
-Install root user
- - Go to localhost:81/phpmyadmin (root - empty password)
- - Click on SQL and copy paste:
- `GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' 
-    IDENTIFIED BY '' 
-    WITH GRANT OPTION;
-FLUSH PRIVILEGES;`
+`$ mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '' WITH GRANT OPTION; FLUSH PRIVILEGES;"`
+`
 
-Finaly
-`$ exit `
-Enable configuration file
-`$ cd ../ && cp config.json.sample config.json`
-Run application
-` $ fig up`
-
+Usages
+-------------------------
 
 Mysql
+
 http://localhost:81/phpmyadmin
 
+
+
 Node
+
 http://localhost
+
 terminal: `$ docker-enter docker_node_1`
+
+
+Troubleshooting
+-----------------------
+
+*Mysql can't run* (https://github.com/docker/docker/issues/4704#issuecomment-64021810=
+
+`sudo ln -s /etc/apparmor.d/usr.sbin.mysqld /etc/apparmor.d/disable/`
+
+`sudo apparmor_parser -R /etc/apparmor.d/usr.sbin.mysqld`
+
