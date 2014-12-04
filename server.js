@@ -11,7 +11,6 @@ mongoose.connect(configDB.url);
 
 app.use(express.static(__dirname + '/public'));
 require('./server/routes/api')(app);
-// app.use('/api', apiRoute);
 
 app.get('/*', function (req, res) {
   res.redirect("/public/index.html");

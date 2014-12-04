@@ -7,6 +7,9 @@ var dbConfig = function(){
     else if(process.env.NODE_ENV == 'dev'){
         url = 'mongodb://localhost/bitonic'
     }
+    else{
+        url='mongodb://localhost/bitonic'
+    }
 
     return {
         url : url
