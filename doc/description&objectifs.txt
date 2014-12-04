@@ -9,8 +9,13 @@ Description fonctionnelle :
 
 Fonction principale :
 
-- Permettre à l'utilisateur de faire un don aux ONG présentes sur la  du monde de son choix
+- Permettre à l'utilisateur de faire un don aux ONG présentes sur la région du monde de son choix
 
 Fonctions secondaires :
 - Afficher les "points chauds" sur la carte du monde
 - Visualiser les informations relatives à une région en particulier
+
+
+Objectif :
+
+Faciliter la visualisation des grands conflits à travers le monde et l'envoi de dons aux ONG présentes sur place.
