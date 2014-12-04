@@ -8,16 +8,16 @@ var del = require('del');
 var runSequence = require('run-sequence');
 
 
-gulp.task('clean', del.bind(null, ['client/public']));
+gulp.task('clean', del.bind(null, ['public']));
 
 gulp.task('copy', function() {
     gulp.src(['client/bower_components/**/*'], {base: './client'})
-        .pipe(gulp.dest('client/public'));
+        .pipe(gulp.dest('public'));
     gulp.src(['client/assets/**/*'], {base: './client/assets'})
-        .pipe(gulp.dest('client/public'));
+        .pipe(gulp.dest('public'));
 
     gulp.src(['client/index.html'], {base: './client'})
-        .pipe(gulp.dest('client/public'));
+        .pipe(gulp.dest('public'));
 });
 
 gulp.task('templates', function() {
@@ -41,7 +41,7 @@ gulp.task('libs.scripts', function() {
         .pipe($.concat('libs.js'))
         .pipe($.
             if (dist, $.uglify()))
-        .pipe(gulp.dest('client/public'));
+        .pipe(gulp.dest('public'));
 });
 
 gulp.task('app.scripts', function() {
@@ -57,7 +57,7 @@ gulp.task('app.scripts', function() {
         // real minifier ?
         .pipe($.
             if (dist, $.uglify()))
-        .pipe(gulp.dest('client/public'));
+        .pipe(gulp.dest('public'));
 });
 
 gulp.task('styles', function(e) {
@@ -71,7 +71,7 @@ gulp.task('styles', function(e) {
         .pipe($.autoprefixer('last 1 version'))
         .pipe($.
             if (dist, $.minifyCss()))
-        .pipe(gulp.dest('client/public'));
+        .pipe(gulp.dest('public'));
 });
 
 gulp.task('default', ['clean'], function(cb) {
@@ -81,7 +81,7 @@ gulp.task('default', ['clean'], function(cb) {
 
 gulp.task('watch', ['default'], function() {
     gulp.watch([
-        'client/public/**/*',
+        'public/**/*',
     ], $.livereload.changed);
 
     gulp.watch(['client/app/**/*.js'], ['app.scripts']);

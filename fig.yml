@@ -3,7 +3,7 @@ node:
  ports:
   - "80:80"
  volumes:
-  - ../:/app
+  - ./:/app
  links:
   - mongo
   - mysql
@@ -13,7 +13,7 @@ mongo:
  expose:
   - "27017"
  volumes:
-  - ../tmp/mongo:/data/db
+  - ./tmp/mongo:/data/db
 
 mysql:
  command: supervisord -n
@@ -23,4 +23,4 @@ mysql:
  ports:
   - "81:80"
  volumes:
-  - ../tmp/mysql:var/lib/mysql
+  - ./tmp/mysql:var/lib/mysql

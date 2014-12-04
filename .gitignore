@@ -3,7 +3,9 @@
 !/tmp/mongo/.gitkeep
 !/tmp/mysql/.gitkeep
 /config.json
-/client/public
+/public
+/tmp
+/docker
 
 # Logs
 logs
