@@ -1,14 +1,20 @@
+var Place  = require('../models/place');
+
+
 exports.addDonation = function(req, res){
 
     var params = req.body;
 
     var amount     = params.amount,
-        firstnName = params.firstName,
+        firstName = params.firstName,
         lastName   = params.lastName,
-        place      = params.place,
+        placeId      = params.placeId,
         preferences = params.preferences,
         pictureUrl = params.pictureUrl;
 
 
-        console.log(req.body);
+    Place.findByIdAndUpdate({_id : placeId},{$push : {"donators" : { name : firstName}}} ,function(err){
+        console.log(err);
+    });
+
 }
