@@ -18,6 +18,14 @@
                 </li>
               </ul>
             </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">Donateurs</div>
+              <ul class="list-group">
+                <li class="list-group-item" ng-repeat="don in marker.donators">
+                {{don.name}} : {{don.amount}}€
+                </li>
+              </ul>
+            </div>
             <div class="text-center">
                 <button class="btn btn-primary btn-lg" ng-click="showDonateForm()">Faire un don</button>
             </div>
@@ -45,7 +53,8 @@
 
               <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-primary" ng-click="submitForm(form, donator, marker._id)">Envoyer</button>
+                  <button type="submit" class="btn btn-primary" ng-click="submitForm(donator, marker._id)">Envoyer</button>
+                  <button class="btn btn-primary btn-link" ng-click="backToDetail()">Retour</button>
                 </div>
               </div>
             </form>
