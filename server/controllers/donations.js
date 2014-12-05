@@ -13,8 +13,14 @@ exports.addDonation = function(req, res){
     console.log(req.body)
 
 
-    Place.findByIdAndUpdate({_id : placeId},{$push : {donators : { name : name, amount : amount}}} ,function(err){
-        console.log(err);
+    Place.findByIdAndUpdate(placeId,{$push : {donators : { name : name, amount : amount}}} ,function(err){
+
+        if(err){ 
+           console.log(err) 
+         } else { 
+            console.log('Added')
+         }
+
     });
 
 }
