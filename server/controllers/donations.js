@@ -13,7 +13,7 @@ exports.addDonation = function(req, res){
     console.log(req.body)
 
 
-    Place.findByIdAndUpdate(placeId,{$push : {donators : { name : name, amount : amount}}} ,function(err){
+    Place.findByIdAndUpdate(placeId,{$push : {donators : { name : name, amount : amount}}},{upsert:true} ,function(err){
 
         if(err){ 
            console.log(err) 
