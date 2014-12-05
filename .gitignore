@@ -1,8 +1,3 @@
-/tmp/*/*
-!/tmp/.gitkeep
-!/tmp/mongo/.gitkeep
-!/tmp/mysql/.gitkeep
-/config.json
 /public
 /tmp
 /.tmp
