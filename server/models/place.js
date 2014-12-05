@@ -8,7 +8,7 @@ var placeSchema = mongoose.Schema({
     donators : [
     {
         name : String,
-        amount : Number
+        amount : String
     }
     ]
 });
