@@ -7,11 +7,10 @@ var placeSchema = mongoose.Schema({
     organizations : [],
     donators : [
     {
-        name : String
+        name : String,
+        amount : Number
     }
     ]
 });
 
 module.exports = mongoose.model('Place', placeSchema, 'Places');
-
-

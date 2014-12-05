@@ -6,14 +6,11 @@ exports.addDonation = function(req, res){
     var params = req.body;
 
     var amount     = params.amount,
-        firstName = params.firstName,
-        lastName   = params.lastName,
-        placeId      = params.placeId,
-        preferences = params.preferences,
-        pictureUrl = params.pictureUrl;
+        name       = params.name,
+        placeId    = params.placeId;
 
 
-    Place.findByIdAndUpdate({_id : placeId},{$push : {"donators" : { name : firstName}}} ,function(err){
+    Place.findByIdAndUpdate({_id : placeId},{$push : {"donators" : { name : name, amount : amount}}} ,function(err){
         console.log(err);
     });
 
