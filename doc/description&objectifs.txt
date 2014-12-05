@@ -1,8 +1,8 @@
 [BITONIC] Human'iti
 
 
-Human'iti est une application qui permet, en un clin d'oeil, de visualiser les zones géographiques sinistrées et les régions du monde en guerre,
-Un clic sur une région affiche les ONG présentes à proximité et permet d'effectuer un don qui sera divisé entre ces différentes ONG.
+Vous n'avez pas le temps de suivre les actualités mais vous souhaitez participer à l'effort international ?
+Avec Human'iti, visualisez rapidement les zones sur lesquelles sont présentes les ONG, et soutenez l'action collective de votre choix !
 
 Description fonctionnelle :
 
