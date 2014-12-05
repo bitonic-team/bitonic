@@ -21,7 +21,6 @@ install docker-enter
 `$ mkdir -p tmp/mongo && fig up`
 
 Sorrry, but you will need to enter in node container to install `gulp` and execute build process:
-Sorrry, but you will need to enter in node container to install `gulp` and execute build process:
 
 `$ docker-enter bitonic_node_1`
 
