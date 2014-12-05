@@ -7,7 +7,7 @@ angular.module('bitonic', [
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
-      .otherwise('/');
+      .otherwise('/map');
 
     $locationProvider.html5Mode(true);
   });

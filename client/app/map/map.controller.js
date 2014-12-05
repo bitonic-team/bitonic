@@ -43,6 +43,14 @@ angular.module('bitonic')
     };
 
     $scope.submitForm = function(donator, placeid) {
-        $http.post('http://178.62.27.132/api/donate', {amount: donator.amount, name: donator.name, placeid:placeid})
+        $http.post('http://178.62.27.132/api/donate', {amount: donator.amount, name: donator.name, placeId:placeid}).then(function(res) {
+            if(res.data == "ok"){
+                alert('Votre don a bien été prit en compte');
+            }
+        });
+    };
+
+    $scope.backToDetail = function() {
+        $scope.donateForm = false;
     };
   });
