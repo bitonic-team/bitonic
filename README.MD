@@ -32,7 +32,7 @@ Installation without docker
 **Requirements:**
 Node, npm
 
-`$ git clone https://github.com/lighta971/bitonic && cd bitonic`
+`$ git clone https://github.com/bitonic-team/bitonic && cd bitonic`
 
 `$ sudo npm install -g gulp bower`
 
@@ -47,7 +47,7 @@ Node
 
 http://localhost
 
-terminal: `$ docker-enter docker_node_1`
+terminal: `$ docker-enter www_node_1`
 
 Mongo
 
