@@ -1,15 +1,16 @@
 {
-  "name": "foo",
+  "name": "bitonic",
   "config": {
     "port": "80"
   },
   "scripts": {
-    "start": "/usr/local/bin/npm install && /usr/local/bin/gulp && /usr/local/bin/forever -fw server.js"
+    "start": "/usr/local/bin/npm install && /usr/local/bin/forever -fw server.js NODE_ENV=prod"
   },
   "dependencies": {
     "body-parser": "~1.5.0",
     "compression": "~1.0.1",
     "cookie-parser": "~1.0.1",
+    "cors": "^2.5.2",
     "del": "^1.0.0",
     "errorhandler": "~1.0.0",
     "express": "^4.10.4",

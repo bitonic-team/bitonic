@@ -1,8 +1,10 @@
-Bitonic - La Nuit de l'info Team :D
+Bitonic Team - La Nuit de l'info 2014 :D
 ===================
 
+[<img src="http://i.imgur.com/7CET5LB.png" />](http://i.imgur.com/7CET5LB.png)
+[<img src="http://i.imgur.com/QwLcsiD.png" />](http://i.imgur.com/QwLcsiD.png)
 
-Installation
+Installation with docker
 -------------
 **Requirements:**
 
@@ -16,23 +18,30 @@ install docker-enter
 
 `$ git clone https://github.com/lighta971/bitonic && cd bitonic`
 
-`$ cd docker && fig up`
+`$ mkdir -p tmp/mongo && fig up`
 
-`$ docker-enter docker_mysql_1`
+Sorrry, but you will need to enter in node container to install `gulp` and execute build process:
 
-`$ mysql_install_db && supervisorctl restart mysql`
+`$ docker-enter bitonic_node_1`
 
-`$ mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '' WITH GRANT OPTION; FLUSH PRIVILEGES;"`
-`
+`$ npm install -g gulp && gulp`
+
+Installation without docker
+-------------
+
+**Requirements:**
+Node, npm
+
+`$ git clone https://github.com/lighta971/bitonic && cd bitonic`
+
+`$ sudo npm install -g gulp bower`
+
+`$ npm install && bower install`
+
+`$ node server.js`
 
 Usages
 -------------------------
-
-Mysql
-
-http://localhost:81/phpmyadmin
-
-
 
 Node
 
@@ -40,13 +49,8 @@ http://localhost
 
 terminal: `$ docker-enter docker_node_1`
 
+Mongo
 
-Troubleshooting
------------------------
+terminal: `$ docker-enter www_mongo_1`
 
-*Mysql can't run* (https://github.com/docker/docker/issues/4704#issuecomment-64021810=
-
-`sudo ln -s /etc/apparmor.d/usr.sbin.mysqld /etc/apparmor.d/disable/`
-
-`sudo apparmor_parser -R /etc/apparmor.d/usr.sbin.mysqld`
 

@@ -8,7 +8,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 
 
-gulp.task('clean', del.bind(null, ['public']));
+gulp.task('clean', del.bind(null, ['public', '.tmp']));
 
 gulp.task('copy', function() {
     gulp.src(['client/bower_components/**/*'], {base: './client'})
@@ -31,12 +31,11 @@ gulp.task('templates', function() {
             moduleName:"bitonic",
         }))
         .pipe($.concat('template.js'))
-        .pipe(gulp.dest('./tmp'));
+        .pipe(gulp.dest('./.tmp'));
 });
 
 gulp.task('libs.scripts', function() {
     var bowerJs = require('wiredep')().js;
-    // TODO ad other_components files after ngmin
     return gulp.src(bowerJs)
         .pipe($.concat('libs.js'))
         .pipe($.
@@ -49,6 +48,7 @@ gulp.task('app.scripts', function() {
             'client/app/app.js',
             '.tmp/template.js',
             'client/app/**/*.js',
+            'client/components/**/*.js',
         ])
         .pipe($.concat('app.js'))
         // pre-minifier ?
@@ -77,14 +77,21 @@ gulp.task('styles', function(e) {
 gulp.task('default', ['clean'], function(cb) {
     runSequence(['copy', 'templates', 'libs.scripts', 'styles'], 'app.scripts', cb);
 });
-
+gulp.task('template2', ['templates'], function(cb) {
+    runSequence('app.scripts', cb);
+});
 
 gulp.task('watch', ['default'], function() {
     gulp.watch([
         'public/**/*',
+        '!public/bower_components',
     ], $.livereload.changed);
 
     gulp.watch(['client/app/**/*.js'], ['app.scripts']);
-    gulp.watch(['client/app/**/*.html'], ['templates']);
+    gulp.watch(['client/app/**/*.html'], ['template2']);
+    gulp.watch(['client/index.html'], function() {
+        gulp.src(['client/index.html'], {base: './client'})
+        .pipe(gulp.dest('public'));
+    });
     gulp.watch(['client/app/**/*.less'], ['styles']);
 });

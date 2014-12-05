@@ -1,13 +1,13 @@
 'use strict';
 
-angular.module('yotestApp', [
-  'ngCookies',
+angular.module('bitonic', [
   'ngResource',
-  'ui.router'
+  'ui.router',
+  'ngMap',
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
-      .otherwise('/');
+      .otherwise('/map');
 
     $locationProvider.html5Mode(true);
   });

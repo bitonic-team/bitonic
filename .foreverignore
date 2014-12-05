@@ -1,7 +1,9 @@
 tmp/**
+.tmp/**
 docker/**
 node_modules/**
 .git/**
 .gitignore
 public/**
 client/**
+gulpfile.js
