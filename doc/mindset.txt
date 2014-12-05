@@ -14,7 +14,7 @@ Nous allons donc développer une application web, avec un serveur sous forme d'A
 L'application consiste en une carte du monde, sur laquelle s'affichent les "points chauds", c'est-à-dire les régions sinistrées, les territoires en guerre...
 L'objectif est d'une part de faciliter la visualisation des conflits dans le monde, et d'autre part de permettre aux utilisateurs de faire un don aux Organisations non gouvernementales présentes sur une zone donnée.
 
-Notre objectif à nous, en tant qu'équipe, est de fournir une application web et une application mobile fonctionnelles ainsi que les documents nécessaires aux défis Mindset et Agile avant la fin du temps imparti. Nous avons bon espoir de remporter au moins un défi. De manière, plus précise, la méthode Agile nous permet de définir des "objectifs" pour chaque "sprint", définis sur notre board Trello : https://trello.com/b/RqDONpmX/bitonic-will-save-the-huminaty
+Notre objectif à nous, en tant qu'équipe, est de fournir une application web et une application mobile fonctionnelles ainsi que les documents nécessaires aux défis Mindset et Agile avant la fin du temps imparti. Nous avons bon espoir de remporter au moins un défi. De manière, plus précise, la méthode Agile nous permet de définir des "objectifs" pour chaque "sprint", définis sur notre board Trello : https://trello.com/b/RqDONpmX/bitonic-will-save-the-humanity
 
 Les tâches sont réparties comme suit :
 
@@ -31,3 +31,6 @@ Les tâches sont réparties comme suit :
  Ma principale crainte, c'est le temps : tout semble passer très vite, même si on avance, et même si tout le monde est encore motivé, ce qui est une bonne chose si l'on compare à notre nuit de l'info 2013, il est difficile de dire que tout sera terminé. Le plus dommage serait que l'application ne soit pas suffisamment avancée pour répondre au moindre défi.
 
  Je vais donc prendre des mesures en conséquence au prochain daily scrum, après avoir vu où tout le monde en est, pour voir s'il est toujours réaliste de répondre à nos 5 défis. On a toujours bon espoir d'en remporter au moins un. ;)
+
+ Mise à jour 1h20 :
+ Après concertation, on a pris un tout petit peu de retard, on est toujours motivé et on envisage toujours de répondre aux 5 défis !
