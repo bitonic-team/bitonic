@@ -5,5 +5,5 @@ module.exports = function(app){
     app.get('/api/places', places.getPlaces);
     app.get('/api/places/:id', places.getPlace);
 
-    app.post('post', donations.addDonation)
+    app.post('/api/donate', donations.addDonation)
 };
