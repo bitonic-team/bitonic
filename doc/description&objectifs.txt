@@ -1,7 +1,7 @@
-[BITONIC] Humans play
+[BITONIC] Human'iti
 
 
-[nom de l'appli] est une application qui permet, en un clin d'oeil, de visualiser les zones géographiques sinistrées et les régions du monde en guerre,
+Human'iti est une application qui permet, en un clin d'oeil, de visualiser les zones géographiques sinistrées et les régions du monde en guerre,
 Un clic sur une région affiche les ONG présentes à proximité et permet d'effectuer un don qui sera divisé entre ces différentes ONG.
 
 Description fonctionnelle :
