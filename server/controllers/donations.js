@@ -19,6 +19,7 @@ exports.addDonation = function(req, res){
            console.log(err) 
          } else { 
             console.log('Added')
+            res.json('ok')
          }
 
     });
