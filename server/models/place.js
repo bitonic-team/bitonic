@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
 
-
 var placeSchema = mongoose.Schema({
     name: String,
     lat: Number, 
