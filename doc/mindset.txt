@@ -34,3 +34,8 @@ Les tâches sont réparties comme suit :
 
  Mise à jour 1h20 :
  Après concertation, on a pris un tout petit peu de retard, on est toujours motivé et on envisage toujours de répondre aux 5 défis !
+
+
+ Situation intermédiaire bis :
+
+ Il est 03h20 et je me rends compte de l'impact que peut avoir la fatigue sur le développement (beaucoup d'erreurs "bêtes" que l'on met du temps à trouver) comme sur la motivation. Alors on s'adapte, les choses vont moins vite, on revoit à la baisse les ésperances les plus extravagantes et on se concentre sur l'essentiel. On se dit que beaucoup d'équipes doivent avoir déjà plus ou moins abandonné et cela nous aide à tenir, à garder l'envie d'aller au bout. La bonne nouvelle c'est que, même si ça a mis du temps, "tout" (le serveur, le client web, le client mobile) marche avec au moins les fonctionnalités basiques. Le produit final devrait donc être livrable et utilisable.
