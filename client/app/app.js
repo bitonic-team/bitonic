@@ -2,7 +2,8 @@
 
 angular.module('bitonic', [
   'ngResource',
-  'ui.router'
+  'ui.router',
+  'ngMap',
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider

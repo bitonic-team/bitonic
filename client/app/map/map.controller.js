@@ -2,30 +2,47 @@
 
 angular.module('bitonic')
   .controller('MapCtrl', function ($scope, $http) {
-
-    $scope.map;
-    $scope.stores = [];
-    $scope.$on('mapInitialized', function(event, evtMap) {
-      map = evtMap;
+    $scope.showModal = false;
+    $scope.donateForm = false;
+    $scope.marker = {};
+    $scope.map=null;
+    $scope.places = [];
+    $scope.$on('mapInitialized', function(event, map) {
       $scope.map = map;
-      console.log('loading scripts/starbucks.json');
-      $http.get('https://rawgit.com/allenhwkim/angularjs-google-maps/master/testapp/scripts/starbucks.json').success( function(stores) {
-        for (var i=0; i<stores.length; i++) {
-          var store = stores[i];
-          store.position = new google.maps.LatLng(store.latitude,store.longitude);
-          store.title = store.name;
+      $http.get('http://178.62.27.132/api/places').success( function(places) {
 
-          var marker = new google.maps.Marker(store);
+        for (var i=0; i<places.length; i++) {
+            var place = places[i];
 
-          google.maps.event.addListener(map, 'click', function() {
-            $scope.storeInfo.hide();
-          });
+            place.position = new google.maps.LatLng(place.lat,place.lng);
+            place.title = place.name;
 
-          $scope.stores.push(marker); 
+            var marker = new google.maps.Marker({
+                position: place.position,
+                title: place.title
+            });
+            marker.place = place;
+
+            google.maps.event.addListener(marker, 'click', function(){
+                $scope.showModal = true;
+                $scope.donateForm = false;
+
+                $http.get('http://178.62.27.132/api/places/'+this.place._id).success( function(marker) {
+                    $scope.marker = marker;
+                });
+            });
+
+            // To add the marker to the map, call setMap();
+            marker.setMap(map);
         }
-        console.log('finished loading scripts/starbucks.json', '$scope.stores', $scope.stores.length);
-        $scope.markerClusterer = new MarkerClusterer(map, $scope.stores, {});
-        $scope.fullScreenToggle.click();
       });
     });
+
+    $scope.showDonateForm = function() {
+        $scope.donateForm = true;
+    };
+
+    $scope.submitForm = function(donator, placeid) {
+        $http.post('http://178.62.27.132/api/donate', {amount: donator.amount, name: donator.name, placeid:placeid})
+    };
   });

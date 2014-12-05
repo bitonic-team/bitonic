@@ -36,6 +36,7 @@ gulp.task('templates', function() {
 
 gulp.task('libs.scripts', function() {
     var bowerJs = require('wiredep')().js;
+    console.log(bowerJs);
     // TODO ad other_components files after ngmin
     return gulp.src(bowerJs)
         .pipe($.concat('libs.js'))
@@ -49,6 +50,7 @@ gulp.task('app.scripts', function() {
             'client/app/app.js',
             '.tmp/template.js',
             'client/app/**/*.js',
+            'client/components/**/*.js',
         ])
         .pipe($.concat('app.js'))
         // pre-minifier ?

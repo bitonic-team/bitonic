@@ -11,9 +11,12 @@ html {
   min-height: 100%;
 }
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  box-sizing: border-box;
+  min-height: 100%;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -37,7 +40,39 @@ body {
   margin: 20px 0;
 }
 
-map {
-    height: 500px;
-    width: 500px;
+
+.modal-dialog {
+  width: 60%;
+  height: 100%;
+  padding: 0;
+  margin:0;
+}
+.modal-content {
+    background: fade(#008CFF, 70%);
+  height: 100%;
+  border-radius: 0;
+  color:white;
+  overflow:auto;
+}
+.modal-backdrop {
+    background: fade(#008CFF, 50%);
+    // background: transparent;
+}
+
+#home-title, .modal-title, .modal-subtitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 0.1px;
+    color:#fff;
+}
+.modal-subtitle {
+    font-size: 25px;
+}
+
+.modal-header {
+    border-bottom-color: fade(#fff, 30%);
+}
+.modal-header .close {
+    font-size: 60px;
 }

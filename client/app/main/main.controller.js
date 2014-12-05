@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('bitonic')
-  .controller('MainCtrl', function ($scope, $http) {
+  .controller('MainCtrl', function ($scope) {
+        $scope.showModal = true;
 
   });
