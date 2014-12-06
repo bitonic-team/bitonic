@@ -9,7 +9,7 @@ angular.module('bitonic')
     $scope.places = [];
     $scope.$on('mapInitialized', function(event, map) {
       $scope.map = map;
-      $http.get('http://178.62.27.132/api/places').success( function(places) {
+      $http.get('/api/places').success( function(places) {
 
         for (var i=0; i<places.length; i++) {
             var place = places[i];
@@ -27,7 +27,7 @@ angular.module('bitonic')
                 $scope.showModal = true;
                 $scope.donateForm = false;
 
-                $http.get('http://178.62.27.132/api/places/'+this.place._id).success( function(marker) {
+                $http.get('/api/places/'+this.place._id).success( function(marker) {
                     $scope.marker = marker;
                 });
             });
@@ -43,7 +43,7 @@ angular.module('bitonic')
     };
 
     $scope.submitForm = function(donator, placeid) {
-        $http.post('http://178.62.27.132/api/donate', {amount: donator.amount, name: donator.name, placeId:placeid}).then(function(res) {
+        $http.post('/api/donate', {amount: donator.amount, name: donator.name, placeId:placeid}).then(function(res) {
             if(res.data == "ok"){
                 alert('Votre don a bien été prit en compte');
             }
